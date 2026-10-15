@@ -1,14 +1,17 @@
 import cv2
 import mediapipe as mp
+# Явный импорт подмодулей для устранения ошибки AttributeError
+import mediapipe.python.solutions.pose as mp_pose
+import mediapipe.python.solutions.drawing_utils as mp_drawing
 
 class PoseDetector:
     def __init__(self, min_detection_confidence=0.6, min_tracking_confidence=0.6):
-        self.mp_pose = mp.solutions.pose
+        self.mp_pose = mp_pose
         self.pose = self.mp_pose.Pose(
             min_detection_confidence=min_detection_confidence,
             min_tracking_confidence=min_tracking_confidence
         )
-        self.mp_draw = mp.solutions.drawing_utils
+        self.mp_draw = mp_drawing
 
     def find_pose(self, img, draw=True):
         img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -23,7 +26,6 @@ class PoseDetector:
             
             h, w, _ = img.shape
             for idx, lm in enumerate(results.pose_landmarks.landmark):
-                # Сохраняем пиксельные координаты и нормированные Z
                 landmarks[idx] = (int(lm.x * w), int(lm.y * h), lm.z)
                 
         return img, landmarks
