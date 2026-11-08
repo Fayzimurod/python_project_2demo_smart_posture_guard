@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="la">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithmus Successus</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-py: #161b22;
+            --card-js: #1f242c;
+            --text-main: #c9d1d9;
+            --keyword: #ff7b72;
+            --function: #d2a8ff;
+            --comment: #8b949e;
+            --accent: #58a6ff;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            background: linear-gradient(45deg, #58a6ff, #bc8cff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            max-width: 900px;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .code-card {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            border: 1px solid rgba(240,246,252,0.1);
+            transition: transform 0.2s;
+        }
+
+        .code-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .py-card { background-color: var(--card-py); }
+        .js-card { background-color: var(--card-js); }
+
+        .lang-badge {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        pre {
+            margin: 0;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .kwd { color: var(--keyword); font-weight: bold; }
+        .fnc { color: var(--function); }
+        .cmt { color: var(--comment); font-style: italic; }
+    </style>
+</head>
+<body>
+
+    <h1>Algorithmus Incrementi</h1>
+
+    <div class="container">
+        <!-- Python Version (Latin) -->
+        <div class="code-card py-card">
+            <div class="lang-badge">Python</div>
+            <pre><span class="kwd">while</span> esuriens:
+    <span class="fnc">discere</span>()
+    <span class="fnc">lucrari</span>()
+    <span class="fnc">possidere</span>()
+    <span class="fnc">multiplicare</span>()
+    <span class="cmt"># intermittere()</span></pre>
+        </div>
+
+        <!-- JavaScript Version (Latin) -->
+        <div class="code-card js-card">
+            <div class="lang-badge">JavaScript</div>
+            <pre><span class="kwd">while</span> (inquietus) {
+    <span class="fnc">discere</span>();
+    <span class="fnc">lucrari</span>();
+    <span class="fnc">possidere</span>();
+    <span class="fnc">multiplicare</span>();
+    <span class="cmt">// intermittere();</span>
+}</pre>
+        </div>
+    </div>
+
+</body>
+</html>
