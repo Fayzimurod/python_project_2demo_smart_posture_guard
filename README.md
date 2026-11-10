@@ -1,3 +1,4 @@
+<!-- <p>наконец-то отпустил её</p> --> 
 # 🧍 Smart Posture Guard
 
 Real-time webcam posture monitor powered by **MediaPipe Pose** + **OpenCV**.  
