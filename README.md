@@ -1,3 +1,4 @@
+<!-- <p>must be nice, I work more hours than u r awake or than anybody awake.</p> -->
 # 🧍 Smart Posture Guard
 
 Real-time webcam posture monitor powered by **MediaPipe Pose** + **OpenCV**.  
